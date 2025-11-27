@@ -742,59 +742,72 @@ footer {
   text-shadow: 0 0 6px rgba(255,215,80,0.4);
 }
 
-/* --- FIX RESPONSIVE UNTUK HP --- */
+/* ========================
+   MOBILE FIXES (max 600px)
+   ======================== */
 @media (max-width: 600px) {
 
-  /* NAVBAR */
-  .nav {
-    padding: 15px 20px;
-  }
+    /* Fix navbar agar tidak bertumpuk */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px 0;
+    }
 
-  .nav ul {
-    gap: 12px;
-  }
+    nav a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
 
-  .nav a {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
+    /* Bubble Winter Tech lebih kecil */
+    .hero-label {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-4deg);
+        font-size: 16px;
+        padding: 10px 18px;
+    }
 
-  /* HERO TITLE */
-  .hero h1 {
-    font-size: 2rem !important;
-  }
+    /* Posisi gantungan di HP */
+    .label-anchor {
+        top: 65px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-  .hero p {
-    font-size: 1rem !important;
-  }
+    /* Lanyard lebih pendek & tengah */
+    .lanyard {
+        top: 85px;
+        left: 50%;
+        height: 90px;
+        transform: translateX(-50%);
+    }
 
-  /* LABEL HERO */
-  .hero-label {
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-4deg);
-    padding: 10px 20px;
-    font-size: 16px;
-  }
+    /* Kartu ID mengecil dan turun naik otomatis */
+    .floating-idcard {
+        top: 160px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 200px;
+    }
 
-  /* LANYARD */
-  .lanyard {
-    left: 50%;
-    transform: translateX(-50%);
-    height: 110px;
-    top: 130px;
-  }
+    /* Title name mengecil agar tidak keluar layar */
+    .hero-title {
+        font-size: 26px !important;
+        text-align: center;
+        padding: 0 10px;
+        margin-top: 140px; /* menyesuaikan posisi kartu */
+    }
 
-  /* ID CARD */
-  .floating-idcard {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 200px;
-    top: 230px;
-  }
-
-  .hero {
-    padding-top: 300px;
-  }
+    /* Subtitle */
+    .hero-subtitle {
+        font-size: 14px !important;
+        padding: 0 20px;
+        text-align: center;
+    }
 }
+
+
